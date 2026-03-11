@@ -1,28 +1,34 @@
 package com.example.cookingguide;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import android.widget.Button;
 
-public class SecondActivity extends AppCompatActivity {
+public class WelcomePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.welcome_page);
 
-        Button backButton=findViewById(R.id.backButton);
-        backButton.setOnClickListener(n ->
+        Button myButton=findViewById(R.id.loginButton);
+
+        myButton.setOnClickListener(v ->
         {
-            //Closes the window and returns to main page
-            finish();
+            //1.Where I am and where I want to go
+            Intent intent = new Intent(WelcomePage.this, LoginPage.class);
+
+            //Do the task (intent)
+            startActivity(intent);
         });
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
