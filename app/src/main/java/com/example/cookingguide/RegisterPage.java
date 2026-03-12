@@ -1,39 +1,41 @@
 package com.example.cookingguide;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.content.Intent;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import android.widget.Button;
 
-public class LoginPage extends AppCompatActivity {
+public class RegisterPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.login_page);
+        setContentView(R.layout.register_page);
 
 
-        //The register button puts through to a register page
-        Button registerButton=findViewById(R.id.registerButtom);
-        registerButton.setOnClickListener(n ->
+        Button checkB = findViewById(R.id.checkButtonReg);
+        checkB.setOnClickListener(n ->
         {
-            Intent intentRegister = new Intent(LoginPage.this, RegisterPage.class);
+            Intent intent=new Intent (RegisterPage.this, WelcomePage.class);
 
-            startActivity(intentRegister);
+            startActivity(intent);
         });
 
-        //The back button returns the user to the main page
-        Button backButton=findViewById(R.id.backButton);
+        Button backButton = findViewById(R.id.backButtonReg);
         backButton.setOnClickListener(n ->
         {
-            finish();
+            Intent intentBack = new Intent(RegisterPage.this, LoginPage.class);
+
+            startActivity(intentBack);
         });
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
