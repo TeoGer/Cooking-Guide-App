@@ -32,7 +32,10 @@ public class LoginPage extends AppCompatActivity {
         Button backButton=findViewById(R.id.backButton);
         backButton.setOnClickListener(n ->
         {
-            finish();
+            Intent intentMainP = new Intent(LoginPage.this, WelcomePage.class);
+
+            startActivity(intentMainP);
+
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
