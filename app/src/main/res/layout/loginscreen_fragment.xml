@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,7 +9,22 @@
     android:background="#0C0C0C"
     tools:context=".LoginScreenFragment">
 
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#070707"
+        android:text="BACK"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
@@ -22,17 +36,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginBottom="4dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <EditText
                 android:id="@+id/editTextText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
-                android:ems="10"
                 android:hint="Username:"
                 android:inputType="text"
                 android:textColor="#4CAF50"
@@ -44,7 +55,6 @@
                 android:id="@+id/editTextTextPassword2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
                 android:hint="Password:"
                 android:inputType="textPassword"
                 android:textColor="#4CAF50"
@@ -59,9 +69,7 @@
                 android:layout_gravity="center"
                 android:backgroundTint="#070707"
                 android:text="LOGIN"
-                android:textAlignment="center"
                 android:textColor="#4CAF50"
-                android:textColorLink="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -88,20 +96,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
-        android:backgroundTint="#070707"
-        android:text="BACK"
-        android:textColorLink="#090909"
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:iconPadding="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="@+id/scrollView2"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
