@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0C0C0C"
-    tools:context=".WelcomePage">
+    tools:context=".WelcomeScreenFragment">
 
     <TextView
         android:layout_width="wrap_content"
