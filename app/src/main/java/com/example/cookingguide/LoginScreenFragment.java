@@ -33,15 +33,15 @@ public class LoginScreenFragment extends Fragment {
         });
 
         // --- BACK BUTTON LOGIC ---
-        backButton.setOnClickListener(n -> {
-            // Instead of an Intent, we just "Go Back" in the stack
+        backButton.setOnClickListener(n ->
+        {
             // This takes the user back to Screen 1 (Welcome)
             getParentFragmentManager().popBackStack();
         });
 
         // --- LOGIN BUTTON LOGIC ---
         loginButton.setOnClickListener(n -> {
-            // Logic for what happens when they click login
+
         });
 
         return v;

@@ -40,7 +40,7 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/etLoginUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
@@ -52,7 +52,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/etLoginPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password:"
