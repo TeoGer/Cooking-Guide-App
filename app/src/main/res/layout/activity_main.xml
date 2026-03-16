@@ -3,4 +3,22 @@
     android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <!-- Here it calls the welcome screen layout -->
+    <include
+        android:id="@+id/welcomeLayout"
+        layout="@layout/welcome_screen" />
+
+    <!-- Here it calls the login screen layout-->
+    <include
+        android:id="@+id/loginLayout"
+        layout="@layout/login_screen"
+        android:visibility="gone"/>
+
+    <!-- Here it calls the register screen layout-->
+    <include
+        android:id="@+id/registerLayout"
+        layout="@layout/register_screen"
+        android:visibility="gone"/>
+
 </FrameLayout>

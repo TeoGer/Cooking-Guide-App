@@ -3,11 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/loginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C0C0C"
-    tools:context=".LoginScreenFragment">
+    android:background="#0C0C0C">
 
     <Button
         android:id="@+id/backButton"
@@ -84,7 +83,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/registerButtom"
+                android:id="@+id/registerButton"
                 android:layout_width="171dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
