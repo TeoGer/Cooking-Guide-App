@@ -62,7 +62,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/loginButton1"
+                android:id="@+id/checkButtonLogin"
                 android:layout_width="152dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
