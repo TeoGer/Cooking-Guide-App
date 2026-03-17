@@ -20,5 +20,9 @@
         android:id="@+id/registerLayout"
         layout="@layout/register_screen"
         android:visibility="gone"/>
+    <include
+        android:id="@+id/loginWelcomeLayout"
+        layout="@layout/loginwelcome_screen"
+        android:visibility="gone"/>
 
 </FrameLayout>

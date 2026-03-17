@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout welcomeLayout;
     ConstraintLayout loginLayout;
     ConstraintLayout registerLayout;
+
+    ConstraintLayout loginWelcomeLayout;
+    TextView loginWelcomeTextView;
 
     //User data storage and file to store the data
     static ArrayList<String[]> userinfo = new ArrayList<>();
@@ -56,11 +60,18 @@ public class MainActivity extends AppCompatActivity {
         welcomeLayout = findViewById(R.id.welcomeLayout);
         loginLayout = findViewById(R.id.loginLayout);
         registerLayout = findViewById(R.id.registerLayout);
+        loginWelcomeLayout = findViewById(R.id.loginWelcomeLayout);
 
         //The screens at startup
         welcomeLayout.setVisibility(View.VISIBLE);
         loginLayout.setVisibility(View.GONE);
         registerLayout.setVisibility(View.GONE);
+        loginWelcomeLayout.setVisibility(View.GONE);
+
+        //Here I initialize the TextViews
+        loginWelcomeTextView = findViewById(R.id.loginWelcomeTextView);
+
+
 
         //The Welcome screen login Button
         Button loginButton = findViewById(R.id.loginButton);
@@ -114,6 +125,13 @@ public class MainActivity extends AppCompatActivity {
                 loginLayout.setVisibility(View.GONE);
                 registerLayout.setVisibility(View.VISIBLE);
                 break;
+
+            case "loginWelcome":
+                welcomeLayout.setVisibility(View.GONE);
+                loginLayout.setVisibility(View.GONE);
+                registerLayout.setVisibility(View.GONE);
+                loginWelcomeLayout.setVisibility(View.VISIBLE);
+                break;
         }
     }
 
@@ -136,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         if(found)   //If the user data is correct it returns to welcome page
         {
             Toast.makeText(this,"Welcome!",Toast.LENGTH_SHORT).show();
-            showScreens("welcome");
+            showScreens("loginWelcome");
         }
         else
         {
