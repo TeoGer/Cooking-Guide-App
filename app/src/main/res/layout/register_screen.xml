@@ -14,9 +14,10 @@
         android:layout_marginTop="56dp"
         android:backgroundTint="#070707"
         android:text="BACK"
+        android:textColor="#4CAF50"
         android:textSize="16sp"
-        android:textStyle="italic"
 
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"

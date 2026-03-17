@@ -69,20 +69,20 @@ public class MainActivity extends AppCompatActivity {
         loginWelcomeLayout.setVisibility(View.GONE);
 
         //Here I initialize the TextViews
-        loginWelcomeTextView = findViewById(R.id.loginWelcomeTextView);
+        loginWelcomeTextView = findViewById(R.id.loginWelcomeMessage);
 
 
 
         //The Welcome screen login Button
         Button loginButton = findViewById(R.id.loginButton);
-        loginButton.setOnClickListener(v -> showScreens("login"));
+        loginButton.setOnClickListener(v -> showScreens("login",null));
 
         //The login screen buttons
         Button backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(v -> showScreens("welcome"));
+        backButton.setOnClickListener(v -> showScreens("welcome",null));
 
         Button registerButton = findViewById(R.id.registerButton);
-        registerButton.setOnClickListener(v -> showScreens("register"));
+        registerButton.setOnClickListener(v -> showScreens("register",null));
 
         loginUsername = findViewById(R.id.etLoginUsername);
         loginPassword = findViewById(R.id.etLoginPassword);
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
         //The register screen buttons
         Button backButtonReg = findViewById(R.id.backButtonReg);
-        backButtonReg.setOnClickListener(v -> showScreens("login"));
+        backButtonReg.setOnClickListener(v -> showScreens("login",null));
 
         //Button checkButtonReg = findViewById(R.id.checkButtonReg);
 
@@ -100,37 +100,42 @@ public class MainActivity extends AppCompatActivity {
         Button registerCheckButton = findViewById(R.id.checkButtonReg);
         registerCheckButton.setOnClickListener(v -> checkRegister());       //Calls the checkRegister method
 
+        //The login Welcome screen buttons
+        Button backButtonLoginWelcome = findViewById(R.id.backButtonLoginWelcome);
+        backButtonLoginWelcome.setOnClickListener(v -> showScreens("login",null));
+
 
 
     }
 
-    void showScreens(String screen)
+    void showScreens(String screen, String username)
     {
+        welcomeLayout.setVisibility(View.GONE);
+        loginLayout.setVisibility(View.GONE);
+        registerLayout.setVisibility(View.GONE);
+        loginWelcomeLayout.setVisibility(View.GONE);
+
         switch(screen)
         {
             case "welcome":
                 welcomeLayout.setVisibility(View.VISIBLE);
-                loginLayout.setVisibility(View.GONE);
-                registerLayout.setVisibility(View.GONE);
                 break;
 
             case "login":
-                welcomeLayout.setVisibility(View.GONE);
                 loginLayout.setVisibility(View.VISIBLE);
-                registerLayout.setVisibility(View.GONE);
                 break;
 
             case "register":
-                welcomeLayout.setVisibility(View.GONE);
-                loginLayout.setVisibility(View.GONE);
                 registerLayout.setVisibility(View.VISIBLE);
                 break;
 
             case "loginWelcome":
-                welcomeLayout.setVisibility(View.GONE);
-                loginLayout.setVisibility(View.GONE);
-                registerLayout.setVisibility(View.GONE);
                 loginWelcomeLayout.setVisibility(View.VISIBLE);
+
+                if(username!=null)
+                {
+                    loginWelcomeTextView.setText("Welcome "+username);
+                }
                 break;
         }
     }
@@ -154,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         if(found)   //If the user data is correct it returns to welcome page
         {
             Toast.makeText(this,"Welcome!",Toast.LENGTH_SHORT).show();
-            showScreens("loginWelcome");
+            showScreens("loginWelcome",username);
         }
         else
         {
@@ -191,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
         saveUserData();
         Toast.makeText(this,"Successful registration",Toast.LENGTH_SHORT).show();
         //When the new user gets added show the welcome screen again
-        showScreens("welcome");
+        showScreens("welcome",null);
     }
 
 
