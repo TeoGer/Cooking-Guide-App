@@ -24,5 +24,21 @@
         android:id="@+id/loginWelcomeLayout"
         layout="@layout/loginwelcome_screen"
         android:visibility="gone"/>
+    <include
+        android:id="@+id/zymaricaLayout"
+        layout="@layout/zymarica"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/soupesLayout"
+        layout="@layout/soupes"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/salatesLayout"
+        layout="@layout/salates"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/glykaLayout"
+        layout="@layout/glyka"
+        android:visibility="gone"/>
 
 </FrameLayout>

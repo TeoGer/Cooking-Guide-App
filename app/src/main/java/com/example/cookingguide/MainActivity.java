@@ -1,3 +1,5 @@
+//Να τσεκάρω τα findViewById
+
 package com.example.cookingguide;
 
 import java.util.ArrayList;
@@ -5,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,9 +30,24 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout welcomeLayout;
     ConstraintLayout loginLayout;
     ConstraintLayout registerLayout;
-
     ConstraintLayout loginWelcomeLayout;
+    ConstraintLayout zymaricaLayout;
+    ConstraintLayout soupesLayout;
+    ConstraintLayout salatesLayout;
+    ConstraintLayout glykaLayout;
     TextView loginWelcomeTextView;
+    TextView TextViewZymarica1;
+    TextView TextViewZymarica2;
+    TextView TextViewSoupes1;
+    TextView TextViewSoupes2;
+    TextView TextViewSalates1;
+    TextView TextViewSalates2;
+    TextView TextViewGlyka1;
+    TextView TextViewGlyka2;
+    TextView ZymarikaTest;
+    TextView SoupesTest;
+    TextView SalatesTest;
+    TextView GlykaTest;
 
     //User data storage and file to store the data
     static ArrayList<String[]> userinfo = new ArrayList<>();
@@ -61,15 +79,35 @@ public class MainActivity extends AppCompatActivity {
         loginLayout = findViewById(R.id.loginLayout);
         registerLayout = findViewById(R.id.registerLayout);
         loginWelcomeLayout = findViewById(R.id.loginWelcomeLayout);
+        zymaricaLayout = findViewById(R.id.zymaricaLayout);
+        soupesLayout = findViewById(R.id.soupesLayout);
+        salatesLayout = findViewById(R.id.salatesLayout);
+        glykaLayout = findViewById(R.id.glykaLayout);
 
         //The screens at startup
         welcomeLayout.setVisibility(View.VISIBLE);
         loginLayout.setVisibility(View.GONE);
         registerLayout.setVisibility(View.GONE);
         loginWelcomeLayout.setVisibility(View.GONE);
+        zymaricaLayout.setVisibility(View.GONE);
+        soupesLayout.setVisibility(View.GONE);
+        salatesLayout.setVisibility(View.GONE);
+        glykaLayout.setVisibility(View.GONE);
 
         //Here I initialize the TextViews
         loginWelcomeTextView = findViewById(R.id.loginWelcomeMessage);
+        TextViewZymarica1 = findViewById(R.id.textViewZymarika1);
+        TextViewZymarica2 = findViewById(R.id.textViewZymarika2);
+        TextViewSoupes1 = findViewById(R.id.textViewSoupes1);
+        TextViewSoupes2 = findViewById(R.id.textViewSoupes2);
+        TextViewSalates1 = findViewById(R.id.textViewSalates1);
+        TextViewSalates2 = findViewById(R.id.textViewSalates2);
+        TextViewGlyka1 = findViewById(R.id.textViewGlyka1);
+        TextViewGlyka2 = findViewById(R.id.textViewGlyka2);
+        ZymarikaTest = findViewById(R.id.ZymarikaTest);
+        SoupesTest = findViewById(R.id.SoupesTest);
+        SalatesTest = findViewById(R.id.SalatesTest);
+        GlykaTest = findViewById(R.id.GlykaTest);
 
 
 
@@ -104,6 +142,18 @@ public class MainActivity extends AppCompatActivity {
         Button backButtonLoginWelcome = findViewById(R.id.backButtonLoginWelcome);
         backButtonLoginWelcome.setOnClickListener(v -> showScreens("login",null));
 
+        ImageButton zymarikaButton = findViewById(R.id.imageButtonZymarika);
+        zymarikaButton.setOnClickListener(v -> showScreens("zymarika",null));
+
+        ImageButton soupesButton = findViewById(R.id.imageButtonSoupes);
+        soupesButton.setOnClickListener(v -> showScreens("soupes",null));
+
+        ImageButton salatesButton = findViewById(R.id.imageButtonSalates);
+        salatesButton.setOnClickListener(v -> showScreens("salates",null));
+
+        ImageButton glykaButton = findViewById(R.id.imageButtonGlyka);
+        glykaButton.setOnClickListener(v -> showScreens("glyka",null));
+
 
 
     }
@@ -114,6 +164,10 @@ public class MainActivity extends AppCompatActivity {
         loginLayout.setVisibility(View.GONE);
         registerLayout.setVisibility(View.GONE);
         loginWelcomeLayout.setVisibility(View.GONE);
+        zymaricaLayout.setVisibility(View.GONE);
+        soupesLayout.setVisibility(View.GONE);
+        salatesLayout.setVisibility(View.GONE);
+        glykaLayout.setVisibility(View.GONE);
 
         switch(screen)
         {
@@ -136,6 +190,22 @@ public class MainActivity extends AppCompatActivity {
                 {
                     loginWelcomeTextView.setText("Welcome "+username);
                 }
+                break;
+
+            case "zymarika":
+                zymaricaLayout.setVisibility(View.VISIBLE);
+                break;
+
+            case "soupes":
+                soupesLayout.setVisibility(View.VISIBLE);
+                break;
+
+            case "salates":
+                salatesLayout.setVisibility(View.VISIBLE);
+                break;
+
+            case "glyka":
+                glykaLayout.setVisibility(View.VISIBLE);
                 break;
         }
     }
