@@ -41,4 +41,25 @@
         layout="@layout/glyka"
         android:visibility="gone"/>
 
+    <include
+        android:id="@+id/zymarika1Layout"
+        layout="@layout/zymarika1"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/zymarika2Layout"
+        layout="@layout/zymarika2"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/zymarika3Layout"
+        layout="@layout/zymarika3"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/zymarika4Layout"
+        layout="@layout/zymarika4"
+        android:visibility="gone"/>
+
+
 </FrameLayout>

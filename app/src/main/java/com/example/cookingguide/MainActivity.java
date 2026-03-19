@@ -3,7 +3,11 @@
 package com.example.cookingguide;
 
 import java.util.ArrayList;
+
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,10 +35,14 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout loginLayout;
     ConstraintLayout registerLayout;
     ConstraintLayout loginWelcomeLayout;
-    ConstraintLayout zymaricaLayout;
+    ConstraintLayout zymarikaLayout;
     ConstraintLayout soupesLayout;
     ConstraintLayout salatesLayout;
     ConstraintLayout glykaLayout;
+    ConstraintLayout zymarika1Layout;
+    ConstraintLayout zymarika2Layout;
+    ConstraintLayout zymarika3Layout;
+    ConstraintLayout zymarika4Layout;
     TextView loginWelcomeTextView;
     TextView TextViewZymarica1;
     TextView TextViewZymarica2;
@@ -44,10 +52,15 @@ public class MainActivity extends AppCompatActivity {
     TextView TextViewSalates2;
     TextView TextViewGlyka1;
     TextView TextViewGlyka2;
-    TextView ZymarikaTest;
-    TextView SoupesTest;
-    TextView SalatesTest;
-    TextView GlykaTest;
+    TextView TextViewzymarika1Title1;
+    TextView TextViewzymarika1Title2;
+    TextView TextViewzymarika2Title1;
+    TextView TextViewzymarika2Title2;
+    TextView TextViewzymarika3Title1;
+    TextView TextViewzymarika3Title2;
+    TextView TextViewzymarika4Title1;
+    TextView TextViewzymarika4Title2;
+
 
     //User data storage and file to store the data
     static ArrayList<String[]> userinfo = new ArrayList<>();
@@ -79,20 +92,28 @@ public class MainActivity extends AppCompatActivity {
         loginLayout = findViewById(R.id.loginLayout);
         registerLayout = findViewById(R.id.registerLayout);
         loginWelcomeLayout = findViewById(R.id.loginWelcomeLayout);
-        zymaricaLayout = findViewById(R.id.zymaricaLayout);
+        zymarikaLayout = findViewById(R.id.zymaricaLayout);
         soupesLayout = findViewById(R.id.soupesLayout);
         salatesLayout = findViewById(R.id.salatesLayout);
         glykaLayout = findViewById(R.id.glykaLayout);
+        zymarika1Layout = findViewById(R.id.zymarika1Layout);
+        zymarika2Layout = findViewById(R.id.zymarika2Layout);
+        zymarika3Layout = findViewById(R.id.zymarika3Layout);
+        zymarika4Layout = findViewById(R.id.zymarika4Layout);
 
         //The screens at startup
         welcomeLayout.setVisibility(View.VISIBLE);
         loginLayout.setVisibility(View.GONE);
         registerLayout.setVisibility(View.GONE);
         loginWelcomeLayout.setVisibility(View.GONE);
-        zymaricaLayout.setVisibility(View.GONE);
+        zymarikaLayout.setVisibility(View.GONE);
         soupesLayout.setVisibility(View.GONE);
         salatesLayout.setVisibility(View.GONE);
         glykaLayout.setVisibility(View.GONE);
+        zymarika1Layout.setVisibility(View.GONE);
+        zymarika2Layout.setVisibility(View.GONE);
+        zymarika3Layout.setVisibility(View.GONE);
+        zymarika4Layout.setVisibility(View.GONE);
 
         //Here I initialize the TextViews
         loginWelcomeTextView = findViewById(R.id.loginWelcomeMessage);
@@ -104,6 +125,15 @@ public class MainActivity extends AppCompatActivity {
         TextViewSalates2 = findViewById(R.id.textViewSalates2);
         TextViewGlyka1 = findViewById(R.id.textViewGlyka1);
         TextViewGlyka2 = findViewById(R.id.textViewGlyka2);
+        TextViewzymarika1Title1=findViewById(R.id.zymarika1Title1);
+        TextViewzymarika1Title2=findViewById(R.id.zymarika1Title2);
+        TextViewzymarika2Title1=findViewById(R.id.zymarika2Title1);
+        TextViewzymarika2Title2=findViewById(R.id.zymarika2Title2);
+        TextViewzymarika3Title1=findViewById(R.id.zymarika3Title1);
+        TextViewzymarika3Title2=findViewById(R.id.zymarika3Title2);
+        TextViewzymarika4Title1=findViewById(R.id.zymarika4Title1);
+        TextViewzymarika4Title2=findViewById(R.id.zymarika4Title2);
+
 
 
 
@@ -152,8 +182,97 @@ public class MainActivity extends AppCompatActivity {
         glykaButton.setOnClickListener(v -> showScreens("glyka",null));
 
         //The zymarika screen buttons
-        Button backButtonZymatika = findViewById(R.id.backButtonZymarika);
-        backButtonZymatika.setOnClickListener(v -> showScreens("loginWelcome",null));
+        Button backButtonZymarika = findViewById(R.id.backButtonZymarika);
+        backButtonZymarika.setOnClickListener(v -> showScreens("loginWelcome",null));
+
+        Button zymarika1Button = findViewById(R.id.zymarikaButton1);
+        zymarika1Button.setOnClickListener(v -> showScreens("zymarika1",null));
+
+        Button zymarika2Button = findViewById(R.id.zymarikaButton2);
+        zymarika2Button.setOnClickListener(v -> showScreens("zymarika2",null));
+
+        Button zymarika3Button = findViewById(R.id.zymarikaButton3);
+        zymarika3Button.setOnClickListener(v -> showScreens("zymarika3",null));
+
+        Button zymarika4Button = findViewById(R.id.zymarikaButton4);
+        zymarika4Button.setOnClickListener(v -> showScreens("zymarika4",null));
+
+        //The zymarika1 buttons
+        Button backButtonZymarika1 = findViewById(R.id.backButtonZymarika1);
+        backButtonZymarika1.setOnClickListener(v -> showScreens("zymarika",null));
+
+        Button zymarika1ButtonSynt = findViewById(R.id.zymarika1ButtonSynt);
+        zymarika1ButtonSynt.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://akispetretzikis.com/recipe/9653/zymarika-me-tyri-krema-kai-kapnisto-solomo"));
+            startActivity(intent);
+        });
+
+        Button zymarika1ButtonVideo = findViewById(R.id.zymarika1ButtonVideo);
+        zymarika1ButtonVideo.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=edkO-QY-Teg"));
+            startActivity(intent);
+        });
+
+        //The zymarika2 buttons
+        Button backButtonZymarika2 = findViewById(R.id.backButtonZymarika2);
+        backButtonZymarika2.setOnClickListener(v -> showScreens("zymarika",null));
+
+        Button zymarika2ButtonSynt = findViewById(R.id.zymarika2ButtonSynt);
+        zymarika2ButtonSynt.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://akispetretzikis.com/recipe/9516/lemonato-kotopoulo-giouvetsi"));
+            startActivity(intent);
+        });
+
+        Button zymarika2ButtonVideo = findViewById(R.id.zymarika2ButtonVideo);
+        zymarika2ButtonVideo.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/ipba4JlLGqE"));
+            startActivity(intent);
+        });
+
+        //The zymarica3 buttons
+        Button backButtonZymarika3 = findViewById(R.id.backButtonZymarika3);
+        backButtonZymarika3.setOnClickListener(v -> showScreens("zymarika",null));
+
+        Button zymarika3ButtonSynt = findViewById(R.id.zymarika3ButtonSynt);
+        zymarika3ButtonSynt.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://akispetretzikis.com/recipe/9487/penes-me-krema-kastano-mpeikon-kai-karamelwmena-kremmydia"));
+            startActivity(intent);
+        });
+
+        Button zymarika3ButtonVideo = findViewById(R.id.zymarika3ButtonVideo);
+        //ΔΕΝ ΕΙΧΕ ΒΙΝΤΕΟ ΜΕ ΣΥΝΤΑΓΗ
+
+        //The zymarika4 buttons
+        Button backButtonZymarika4 = findViewById(R.id.backButtonZymarika4);
+        backButtonZymarika4.setOnClickListener(v -> showScreens("zymarika",null));
+
+        Button zymarika4ButtonSynt = findViewById(R.id.zymarika4ButtonSynt);
+        zymarika4ButtonSynt.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://akispetretzikis.com/recipe/9408/penes-fournou-me-4-tyria"));
+            startActivity(intent);
+        });
+
+        Button zymarika4ButtonVideo = findViewById(R.id.zymarika4ButtonVideo);
+        zymarika4ButtonVideo.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=DGAEqaxzgN0"));
+            startActivity(intent);
+        });
+
+
+        //The soupes screen buttons
+        Button backButtonSoupes = findViewById(R.id.backButtonSoupes);
+        backButtonSoupes.setOnClickListener(v -> showScreens("loginWelcome",null));
+
+        //The salates screen buttons
+        Button backButtonSalates = findViewById(R.id.backButtonSalates);
+        backButtonSalates.setOnClickListener(v -> showScreens("loginWelcome",null));
+
+        //The glyka screen buttons
+        Button backButtonGlyka = findViewById(R.id.backButtonGlyka);
+        backButtonGlyka.setOnClickListener(v -> showScreens("loginWelcome",null));
+
+        //Zymarika scrolling
+
 
 
 
@@ -167,10 +286,15 @@ public class MainActivity extends AppCompatActivity {
         loginLayout.setVisibility(View.GONE);
         registerLayout.setVisibility(View.GONE);
         loginWelcomeLayout.setVisibility(View.GONE);
-        zymaricaLayout.setVisibility(View.GONE);
+        zymarikaLayout.setVisibility(View.GONE);
+        zymarika1Layout.setVisibility(View.GONE);
+        zymarika2Layout.setVisibility(View.GONE);
+        zymarika3Layout.setVisibility(View.GONE);
+        zymarika4Layout.setVisibility(View.GONE);
         soupesLayout.setVisibility(View.GONE);
         salatesLayout.setVisibility(View.GONE);
         glykaLayout.setVisibility(View.GONE);
+
 
         switch(screen)
         {
@@ -196,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case "zymarika":
-                zymaricaLayout.setVisibility(View.VISIBLE);
+                zymarikaLayout.setVisibility(View.VISIBLE);
                 break;
 
             case "soupes":
@@ -209,6 +333,22 @@ public class MainActivity extends AppCompatActivity {
 
             case "glyka":
                 glykaLayout.setVisibility(View.VISIBLE);
+                break;
+
+            case "zymarika1":
+                zymarika1Layout.setVisibility(View.VISIBLE);
+                break;
+
+            case "zymarika2":
+                zymarika2Layout.setVisibility(View.VISIBLE);
+                break;
+
+            case "zymarika3":
+                zymarika3Layout.setVisibility(View.VISIBLE);
+                break;
+
+            case "zymarika4":
+                zymarika4Layout.setVisibility(View.VISIBLE);
                 break;
         }
     }
