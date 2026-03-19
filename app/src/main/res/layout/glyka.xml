@@ -4,15 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/glykaLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/glyka">
 
-    <TextView
-        android:id="@+id/GlykaTest"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/backButtonGlyka"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="173dp"
-        android:layout_marginTop="162dp"
-        android:text="Γλυκά"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="BACK"
+        android:textColor="#E91E63"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/glykaButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Cookies καραμέλα"
+        android:textColor="#E91E63"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButtonGlyka" />
+
+    <Button
+        android:id="@+id/glykaButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="-5dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Ταχινόπιτες με μέλι"
+        android:textColor="#E91E63"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/glykaButton1"
+        app:layout_constraintTop_toBottomOf="@+id/glykaButton1" />
+
+    <Button
+        android:id="@+id/glykaButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Carrot cake"
+        android:textColor="#E91E63"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glykaButton2" />
+
+    <Button
+        android:id="@+id/glykaButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Cheesecake ταχίνι"
+        android:textColor="#E91E63"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glykaButton3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

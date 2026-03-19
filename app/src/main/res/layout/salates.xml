@@ -4,15 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/salatesLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/salates">
 
-    <TextView
-        android:id="@+id/SalatesTest"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/backButtonSalates"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="166dp"
-        android:layout_marginTop="156dp"
-        android:text="Σαλάτες"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="BACK"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/salatesButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Ταμπουλέ με καπνιστό τόνο"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButtonSalates" />
+
+    <Button
+        android:id="@+id/salatesButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Πατατοσαλάτα με σαρδέλες"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/salatesButton1"
+        app:layout_constraintTop_toBottomOf="@+id/salatesButton1" />
+
+    <Button
+        android:id="@+id/salatesButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Σαλάτα με χταπόδι και αλμυρά"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salatesButton2" />
+
+    <Button
+        android:id="@+id/salatesButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Σαλάτα με πεπόνι και προσούτο"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salatesButton3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

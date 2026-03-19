@@ -4,15 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/zymaricaLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/zimarika">
 
-    <TextView
-        android:id="@+id/ZymarikaTest"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/backButtonZymarika"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="141dp"
-        android:text="Ζυμαρικά"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="BACK"
+        android:textColor="#FFEB3B"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/zymarikaButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Ζυμαρικά με τυρί κρέμα και καπνιστό σολομό"
+        android:textColor="#FFEB3B"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButtonZymarika" />
+
+    <Button
+        android:id="@+id/zymarikaButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="31dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Λεμονάτο κοτόπουλο Γιουβέτσι"
+        android:textColor="#FFEB3B"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/zymarikaButton1"
+        app:layout_constraintTop_toBottomOf="@+id/zymarikaButton1" />
+
+    <Button
+        android:id="@+id/zymarikaButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Πένες με κρέμα κάστανο, μπέικον και κρεμμύδια"
+        android:textColor="#FFEB3B"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zymarikaButton2" />
+
+    <Button
+        android:id="@+id/zymarikaButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Πένες φούρνου με 4 τυριά"
+        android:textColor="#FFEB3B"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zymarikaButton3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

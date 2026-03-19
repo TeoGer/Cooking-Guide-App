@@ -4,15 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/soupesLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/soupes">
 
-    <TextView
-        android:id="@+id/SoupesTest"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/backButtonSoupes"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="130dp"
-        android:text="Σούπες"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="BACK"
+        android:textColor="#FF5722"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/soupesButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Γαλλική κρεμμυδόσουπα"
+        android:textColor="#FF5722"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButtonSoupes" />
+
+    <Button
+        android:id="@+id/soupesButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Κοτόσουπα"
+        android:textColor="#FF5722"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/soupesButton1"
+        app:layout_constraintTop_toBottomOf="@+id/soupesButton1" />
+
+    <Button
+        android:id="@+id/soupesButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Ρεβίθια φρικασέ με μανιτάρια"
+        android:textColor="#FF5722"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soupesButton2" />
+
+    <Button
+        android:id="@+id/soupesButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="Πατατόσουπα με κάστανα"
+        android:textColor="#FF5722"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soupesButton3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

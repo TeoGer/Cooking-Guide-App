@@ -104,10 +104,7 @@ public class MainActivity extends AppCompatActivity {
         TextViewSalates2 = findViewById(R.id.textViewSalates2);
         TextViewGlyka1 = findViewById(R.id.textViewGlyka1);
         TextViewGlyka2 = findViewById(R.id.textViewGlyka2);
-        ZymarikaTest = findViewById(R.id.ZymarikaTest);
-        SoupesTest = findViewById(R.id.SoupesTest);
-        SalatesTest = findViewById(R.id.SalatesTest);
-        GlykaTest = findViewById(R.id.GlykaTest);
+
 
 
 
@@ -153,6 +150,12 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton glykaButton = findViewById(R.id.imageButtonGlyka);
         glykaButton.setOnClickListener(v -> showScreens("glyka",null));
+
+        //The zymarika screen buttons
+        Button backButtonZymatika = findViewById(R.id.backButtonZymarika);
+        backButtonZymatika.setOnClickListener(v -> showScreens("loginWelcome",null));
+
+
 
 
 
