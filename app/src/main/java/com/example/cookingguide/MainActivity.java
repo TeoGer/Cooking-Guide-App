@@ -1,10 +1,9 @@
-//Να τσεκάρω τα findViewById
-
 package com.example.cookingguide;
 
 import java.util.ArrayList;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -12,9 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,27 +35,27 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout welcomeLayout;
     ConstraintLayout loginLayout;
     ConstraintLayout registerLayout;
-    ConstraintLayout loginWelcomeLayout;
-    ConstraintLayout zymarikaLayout;
-    ConstraintLayout soupesLayout;
-    ConstraintLayout salatesLayout;
-    ConstraintLayout glykaLayout;
-    ConstraintLayout zymarika1Layout;
-    ConstraintLayout zymarika2Layout;
-    ConstraintLayout zymarika3Layout;
-    ConstraintLayout zymarika4Layout;
-    ConstraintLayout soupes1Layout;
-    ConstraintLayout soupes2Layout;
-    ConstraintLayout soupes3Layout;
-    ConstraintLayout soupes4Layout;
-    ConstraintLayout salates1Layout;
-    ConstraintLayout salates2Layout;
-    ConstraintLayout salates3Layout;
-    ConstraintLayout salates4Layout;
-    ConstraintLayout glyka1Layout;
-    ConstraintLayout glyka2Layout;
-    ConstraintLayout glyka3Layout;
-    ConstraintLayout glyka4Layout;
+    ScrollView loginWelcomeLayout;
+    ScrollView zymarikaLayout;
+    ScrollView soupesLayout;
+    ScrollView salatesLayout;
+    ScrollView glykaLayout;
+    ScrollView zymarika1Layout;
+    ScrollView zymarika2Layout;
+    ScrollView zymarika3Layout;
+    ScrollView zymarika4Layout;
+    ScrollView soupes1Layout;
+    ScrollView soupes2Layout;
+    ScrollView soupes3Layout;
+    ScrollView soupes4Layout;
+    ScrollView salates1Layout;
+    ScrollView salates2Layout;
+    ScrollView salates3Layout;
+    ScrollView salates4Layout;
+    ScrollView glyka1Layout;
+    ScrollView glyka2Layout;
+    ScrollView glyka3Layout;
+    ScrollView glyka4Layout;
 
 
 
@@ -113,6 +114,12 @@ public class MainActivity extends AppCompatActivity {
     EditText registerUsername, registerPassword;
     Button registerCheckButton;
 
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // handle orientation change
+    }
 
 
     @Override

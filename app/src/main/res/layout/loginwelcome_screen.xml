@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/loginWelcomeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="#0C0C0C"
     android:backgroundTint="#0C0C0C">
 
+
+    <ImageButton
+        android:id="@+id/imageButtonSoupes"
+        android:layout_width="142dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="-93dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonSalates"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonSalates"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonSalates"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonZymarika"
+        app:layout_constraintVertical_bias="0.591"
+        app:srcCompat="@drawable/soupes" />
+
     <Button
-        android:id="@+id/backButtonLoginWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:backgroundTint="#070707"
-        android:text="BACK"
-        android:textColor="#4CAF50"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/backButtonLoginWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:backgroundTint="#070707"
+            android:text="BACK"
+            android:textColor="#4CAF50"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/loginWelcomeMessage"
@@ -43,166 +66,155 @@
         android:layout_marginStart="19dp"
         android:layout_marginEnd="19dp"
         android:layout_marginBottom="20dp"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:src="@drawable/zimarika"
         app:layout_constraintBottom_toBottomOf="@+id/loginWelcomeMessage"
         app:layout_constraintEnd_toEndOf="@+id/imageButtonSoupes"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageButtonSoupes"
         app:layout_constraintTop_toBottomOf="@+id/loginWelcomeMessage"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButtonSoupes"
+        android:id="@+id/imageButtonSalates"
         android:layout_width="142dp"
         android:layout_height="93dp"
         android:layout_marginStart="19dp"
         android:layout_marginTop="93dp"
         android:layout_marginEnd="19dp"
         android:layout_marginBottom="20dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonSalates"
-        app:layout_constraintEnd_toEndOf="@+id/imageButtonSalates"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageButtonSalates"
-        app:layout_constraintTop_toTopOf="@+id/imageButtonZymarika"
-        app:srcCompat="@drawable/soupes" />
-
-    <ImageButton
-        android:id="@+id/imageButtonSalates"
-        android:layout_width="0dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="20dp"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/imageButtonGlyka"
         app:layout_constraintEnd_toEndOf="@+id/loginWelcomeMessage"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textViewSoupes1"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonZymarika"
         app:srcCompat="@drawable/salates" />
 
     <ImageButton
         android:id="@+id/imageButtonGlyka"
-        android:layout_width="0dp"
+        android:layout_width="142dp"
         android:layout_height="93dp"
         android:layout_marginStart="19dp"
         android:layout_marginTop="93dp"
         android:layout_marginEnd="19dp"
-        android:layout_marginBottom="120dp"
-        android:scaleType="fitXY"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textViewGlyka2"
         app:layout_constraintStart_toEndOf="@+id/textViewGlyka1"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonSalates"
         app:srcCompat="@drawable/glyka" />
 
-    <TextView
-        android:id="@+id/textViewZymarika1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="14dp"
-        android:text="Ζυμαρικά"
-        android:textColor="#FFEB3B"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonZymarika"
-        app:layout_constraintTop_toTopOf="@+id/imageButtonZymarika" />
+        <TextView
+            android:id="@+id/textViewZymarika1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="14dp"
+            android:text="Ζυμαρικά"
+            android:textColor="#FFEB3B"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonZymarika"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonZymarika" />
 
-    <TextView
-        android:id="@+id/textViewZymarika2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginBottom="34dp"
-        android:text="Pasta"
-        android:textColor="#FFEB3B"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonZymarika"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonZymarika" />
+        <TextView
+            android:id="@+id/textViewZymarika2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginBottom="34dp"
+            android:text="Pasta"
+            android:textColor="#FFEB3B"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonZymarika"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonZymarika" />
 
-    <TextView
-        android:id="@+id/textViewSoupes1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="33dp"
-        android:text="Σούπες"
-        android:textColor="#FF5722"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonSoupes"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonSoupes"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/textViewSoupes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="33dp"
+            android:text="Σούπες"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonSoupes"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonSoupes"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewSoupes2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="33dp"
-        android:text="Soups"
-        android:textColor="#FF5722"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonSoupes"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonSoupes" />
+        <TextView
+            android:id="@+id/textViewSoupes2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="33dp"
+            android:text="Soups"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonSoupes"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonSoupes" />
 
     <TextView
         android:id="@+id/textViewSalates1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
         android:layout_marginBottom="33dp"
         android:text="Σαλάτες"
         android:textColor="#4CAF50"
         android:textSize="16sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="@+id/imageButtonSalates"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonSalates"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewSalates2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="33dp"
-        android:text="Salads"
-        android:textColor="#4CAF50"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonSalates"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonSalates" />
+        <TextView
+            android:id="@+id/textViewSalates2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="33dp"
+            android:text="Salads"
+            android:textColor="#4CAF50"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonSalates"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonSalates" />
 
     <TextView
         android:id="@+id/textViewGlyka1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
+        android:layout_marginEnd="2dp"
         android:layout_marginBottom="33dp"
         android:text="Γλυκά"
         android:textColor="#E91E63"
         android:textSize="16sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="@+id/imageButtonGlyka"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonGlyka"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewGlyka2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="35dp"
-        android:text="Pastry"
-        android:textColor="#E91E63"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonGlyka"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonGlyka" />
+        <TextView
+            android:id="@+id/textViewGlyka2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="35dp"
+            android:text="Pastry"
+            android:textColor="#E91E63"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonGlyka"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonGlyka" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

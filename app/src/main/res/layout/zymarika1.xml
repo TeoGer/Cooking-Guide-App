@@ -1,91 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/zymarika1Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="#070707">
 
-    <Button
-        android:id="@+id/backButtonZymarika1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:backgroundTint="#0C0C0C"
-        android:text="BACK"
-        android:textColor="#FFEB3B"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/zymarika1Title1"
-        android:layout_width="146dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="171dp"
-        android:background="#070707"
-        android:text="ΖΥΜΑΡΙΚΆ"
-        android:textAlignment="center"
-        android:textColor="#FFEB3B"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButtonZymarika1" />
+        <Button
+            android:id="@+id/backButtonZymarika1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#0C0C0C"
+            android:text="BACK"
+            android:textColor="#FFEB3B"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/zymarika1Title2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="142dp"
-        android:background="#070707"
-        android:text="Ζυμαρικά με τυρί κρέμα και καπνιστό σολομό"
-        android:textAlignment="center"
-        android:textColor="#FFEB3B"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/zymarika1ButtonVideo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/zymarika1Title1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ΖΥΜΑΡΙΚΆ"
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/backButtonZymarika1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/zymarika1ButtonSynt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#FFEB3B"
-        android:text="Συνταγή"
-        android:textColor="#070707"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zymarika1Title2" />
+        <TextView
+            android:id="@+id/zymarika1Title2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Ζυμαρικά με τυρί κρέμα και καπνιστό σολομό"
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/zymarika1Title1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/zymarika1ButtonVideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="364dp"
-        android:backgroundTint="#FFEB3B"
-        android:text="Video"
-        android:textColor="#070707"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zymarika1Title2" />
+        <Button
+            android:id="@+id/zymarika1ButtonSynt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#FFEB3B"
+            android:text="Συνταγή"
+            android:textColor="#070707"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/zymarika1Title2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <Button
+            android:id="@+id/zymarika1ButtonVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="#FFEB3B"
+            android:text="Video"
+            android:textColor="#070707"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/zymarika1ButtonSynt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
