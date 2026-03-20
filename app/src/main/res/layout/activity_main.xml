@@ -61,5 +61,70 @@
         layout="@layout/zymarika4"
         android:visibility="gone"/>
 
+    <include
+        android:id="@+id/soupes1Layout"
+        layout="@layout/soupes1"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/soupes2Layout"
+        layout="@layout/soupes2"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/soupes3Layout"
+        layout="@layout/soupes3"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/soupes4Layout"
+        layout="@layout/soupes4"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/salates1Layout"
+        layout="@layout/salates1"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/salates1Layout"
+        layout="@layout/salates1"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/salates2Layout"
+        layout="@layout/salates2"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/salates3Layout"
+        layout="@layout/salates3"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/salates4Layout"
+        layout="@layout/salates4"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/glyka1Layout"
+        layout="@layout/glyka1"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/glyka2Layout"
+        layout="@layout/glyka2"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/glyka3Layout"
+        layout="@layout/glyka3"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/glyka4Layout"
+        layout="@layout/glyka4"
+        android:visibility="gone"/>
+
 
 </FrameLayout>
